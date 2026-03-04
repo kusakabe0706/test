@@ -1,4 +1,4 @@
-name: C Build and Test
+name: Test ensyu14
 
 on: [push]
 
@@ -7,11 +7,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. コードのチェックアウト
+      # 1. コードの取得
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2. コンパイルとビルド
+      # 2. コンパイル
       - name: Compile
         run: |
           gcc -fprofile-arcs -ftest-coverage -o main_test main14.c func14.c
@@ -20,17 +20,19 @@ jobs:
       - name: Run Executable
         run: ./main_test
 
-      # 4. カバレッジの生成
+      # 4. カバレッジレポートの生成
       - name: Generate Coverage Report
         run: |
           gcov func14.c
-          gcov -a func14.c
+          ls -la # ファイルが生成されたかログで確認用
 
-      # 5. 結果（実行ファイルとカバレッジ結果）をアーティファクトとして保存
+      # 5. 実行ファイルとカバレッジ結果を保存
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: test-results
+          name: test-results-v14
           path: |
             main_test
             func14.c.gcov
+            *.gcda
+            *.gcno
