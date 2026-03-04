@@ -1,0 +1,36 @@
+name: C Build and Test
+
+on: [push]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. コードのチェックアウト
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. コンパイルとビルド
+      - name: Compile
+        run: |
+          gcc -fprofile-arcs -ftest-coverage -o main_test main14.c func14.c
+
+      # 3. 実行
+      - name: Run Executable
+        run: ./main_test
+
+      # 4. カバレッジの生成
+      - name: Generate Coverage Report
+        run: |
+          gcov func14.c
+          gcov -a func14.c
+
+      # 5. 結果（実行ファイルとカバレッジ結果）をアーティファクトとして保存
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: |
+            main_test
+            func14.c.gcov
