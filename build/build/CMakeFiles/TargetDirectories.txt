@@ -1,0 +1,6 @@
+/mnt/c/Users/UCRE/Documents/test/build/build/CMakeFiles/func13_lib.dir
+/mnt/c/Users/UCRE/Documents/test/build/build/CMakeFiles/main_app.dir
+/mnt/c/Users/UCRE/Documents/test/build/build/CMakeFiles/run_tests.dir
+/mnt/c/Users/UCRE/Documents/test/build/build/CMakeFiles/test.dir
+/mnt/c/Users/UCRE/Documents/test/build/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/UCRE/Documents/test/build/build/CMakeFiles/rebuild_cache.dir

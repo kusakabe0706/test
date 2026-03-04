@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfunc13_lib.a CMakeFiles/func13_lib.dir/func13.c.o
+/usr/bin/ranlib libfunc13_lib.a

@@ -1,0 +1,1 @@
+/usr/bin/cc --coverage CMakeFiles/main_app.dir/main13.c.o -o main_app  libfunc13_lib.a 
