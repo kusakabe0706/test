@@ -14,6 +14,8 @@ jobs:
       # 2. コンパイル
       - name: Compile
         run: |
+          gcc -fprofile-arcs -ftest-coverage -c func14.c
+          gcc -fprofile-arcs -ftest-coverage -c main14.c
           gcc -fprofile-arcs -ftest-coverage -o main_test main14.c func14.c
 
       # 3. 実行
@@ -23,8 +25,7 @@ jobs:
       # 4. カバレッジレポートの生成
       - name: Generate Coverage Report
         run: |
-          gcov func14.c
-          ls -la # ファイルが生成されたかログで確認用
+          gcov func14.o
 
       # 5. 実行ファイルとカバレッジ結果を保存
       - name: Upload Artifacts
@@ -34,5 +35,3 @@ jobs:
           path: |
             main_test
             func14.c.gcov
-            *.gcda
-            *.gcno
