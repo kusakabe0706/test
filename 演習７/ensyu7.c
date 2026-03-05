@@ -1,17 +1,30 @@
+/**
+* @file ensyu7.c
+* @brief 数値を2倍にするプログラム
+*/
 #include <stdio.h>
 
-//値を倍にして返す関数
+/**
+* @brief 引数で受け取ったポインタの値を2倍にする
+* @param[in,out] ans 2倍にしたい数値へのポインタ
+*/
+
 void dv(int *ans){
     *ans *= 2;
 }
 
+/**
+* @brief メイン関数
+* @details 標準入力から値を受け取り、dv関数を呼び出して結果を表示
+* @return 終了ステータス
+*/
 int main(void){
     int a;
-    //値入力
+
     scanf("%d", &a);
-    //関数呼び出し
+
     dv(&a);
-    //結果表示
+
     printf("%d\n", a);
     return 0;
 }
