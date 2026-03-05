@@ -17,7 +17,7 @@ void swap(menber *x, menber *y){
 void sort_name(menber data[], int n){
     int i, j;
     for(i = 0; i < n; i++){
-        for(j = n-i; j > i; j--){
+        for(j = n-1; j > i; j--){
             if(strcmp(data[j-1].name, data[j].name) > 0){
                 swap(&data[j-1], &data[j]);
             }
@@ -28,8 +28,8 @@ void sort_name(menber data[], int n){
 void sort_score(menber data[], int n){
     int i, j;
     for(i = 0; i < n; i++){
-        for(j = n-i; j > i; j--){
-            if(data[j-1].score > data[j].score){
+        for(j = n-1; j > i; j--){
+            if(data[j-1].score < data[j].score){
                 swap(&data[j-1], &data[j]);
             }
         }
@@ -47,8 +47,14 @@ int main(void){
     };
 
     int i;
-
+    printf("名前順\n");
     sort_name(data, NUM);
+    for(i = 0; i < NUM; i++){
+        printf("%s:%d\n", data[i].name, data[i].score);
+    }
+
+    printf("成績順\n");
+    sort_score(data, NUM);
     for(i = 0; i < NUM; i++){
         printf("%s:%d\n", data[i].name, data[i].score);
     }
