@@ -8,4 +8,6 @@ int main(void){
     dv(&a);
 
     printf("%d\n", a);
+
+    return 0;
 }

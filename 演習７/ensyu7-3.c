@@ -13,4 +13,6 @@ int main(void){
     scanf("%s",text);
 
     hanten(text);
+
+    return 0;
 }

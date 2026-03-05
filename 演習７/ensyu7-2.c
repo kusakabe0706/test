@@ -9,4 +9,6 @@ int main(void){
     scanf("%s", text);
     
     txt(text);
+
+    return 0;
 }
