@@ -13,7 +13,7 @@ int main(void){
     }
 
     if (a == 0){ 
-        printf("---------\n");
+        printf("----------\n");
     }else if (a % 2 != 0){
         printf("奇数\n");
     }else{
