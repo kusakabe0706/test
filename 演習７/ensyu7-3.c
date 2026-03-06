@@ -2,7 +2,7 @@
 #include <string.h>
 
 void hanten(char txt[]){
-    for(int i=strlen(txt);i>=0;i--){
+    for(int i = strlen(txt); i >= 0; i--){
         printf("%c", txt[i]);
     }
     printf("\n");
@@ -10,7 +10,7 @@ void hanten(char txt[]){
 
 int main(void){
     char *text;
-    scanf("%s",text);
+    scanf("%s", text);
 
     hanten(text);
 

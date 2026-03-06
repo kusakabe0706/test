@@ -2,6 +2,7 @@
 * @file ensyu7.c
 * @brief 数値を2倍にするプログラム
 */
+
 #include <stdio.h>
 
 /**
@@ -18,6 +19,7 @@ void dv(int *ans){
 * @details 標準入力から値を受け取り、dv関数を呼び出して結果を表示
 * @return 終了ステータス
 */
+
 int main(void){
     int a;
 
