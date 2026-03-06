@@ -2,13 +2,13 @@
 #include "func9.c"
 
 int main(void){
-    int a;
+    int input_num;
     printf("数値を入力\n");
-    scanf("%d", &a);
+    scanf("%d", &input_num);
 
-    dv(&a);
+    double_value(&input_num);
 
-    printf("%d\n", a);
+    printf("%d\n", input_num);
 
     return 0;
 }

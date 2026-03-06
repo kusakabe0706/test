@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-void txt(char t[]){
-    printf("%s\n", t);
+void print_arr(char arr[]){
+    printf("result=%s\n", arr);
 }
 
 int main(void){
-    char text[20];
+    char input_arr[20];
     printf("文字列を入力\n");
-    scanf("%s", text);
+    scanf("%s", input_arr);
     
-    txt(text);
+    print_arr(input_arr);
 
     return 0;
 }

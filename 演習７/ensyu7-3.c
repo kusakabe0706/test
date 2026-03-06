@@ -1,19 +1,19 @@
 #include <stdio.h>
 #include <string.h>
 
-void hanten(char txt[]){
-    for(int i = strlen(txt); i >= 0; i--){
-        printf("%c", txt[i]);
+void reverse(char arr[]){
+    for(int i = strlen(arr); i >= 0; i--){
+        printf("%c", arr[i]);
     }
     printf("\n");
 }
 
 int main(void){
-    char *text;
+    char *input_arr;
     printf("文字列を入力\n");
-    scanf("%s", text);
+    scanf("%s", input_arr);
 
-    hanten(text);
+    reverse(input_arr);
 
     return 0;
 }

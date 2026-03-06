@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int dv(int *ans){
+int double_value(int *ans){
     *ans *= 2;
     return *ans;
 }

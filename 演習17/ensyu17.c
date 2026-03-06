@@ -9,14 +9,15 @@ void* add_thread(void* add){
 
 int main(void){
     pthread_t thread;
-    int ans = 0;
-    scanf("%d", &ans);
+    int input_num = 0;
+    printf("数値を入力\n");
+    scanf("%d", &input_num);
 
-    pthread_create(&thread, NULL, add_thread, &ans);
+    pthread_create(&thread, NULL, add_thread, &input_num);
 
     pthread_join(thread, NULL);
 
-    printf("%d\n", ans);
+    printf("%d\n", input_num);
 
     return 0;
 }

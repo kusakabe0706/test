@@ -6,11 +6,11 @@ void cb(char* ans){
 }
 
 
-void* scan_thread(void* scan_arr){
-    char* result = (char*) scan_arr;
+void* scan_thread(void* arr){
+    char* scan_arr = (char*) arr;
     printf("入力待ち\n");
 
-    scanf("%s", result);
+    scanf("%s", scan_arr);
 
     return NULL;
 }

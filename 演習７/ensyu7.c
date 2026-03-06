@@ -10,7 +10,7 @@
 * @param[in,out] ans 2倍にしたい数値へのポインタ
 */
 
-void dv(int *ans){
+void double_value(int *ans){
     *ans *= 2;
 }
 
@@ -21,12 +21,12 @@ void dv(int *ans){
 */
 
 int main(void){
-    int a;
+    int input_num;
     printf("数値を入力\n");
-    scanf("%d", &a);
+    scanf("%d", &input_num);
 
-    dv(&a);
+    double_value(&input_num);
 
-    printf("%d\n", a);
+    printf("result=%d\n", input_num);
     return 0;
 }

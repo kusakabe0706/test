@@ -2,8 +2,8 @@
 #include "header13.h"
 
 TEST(header13Test, AddPointers) {
-    int a = 3, b = 5, c = 7;
-    EXPECT_EQ(add(&a, &b, &c), 15);
+    int num1 = 3, num2 = 5, num3 = 7;
+    EXPECT_EQ(add(&num1, &num2, &num3), 15);
 
     int x = -5, y = 10, z = 0;
     EXPECT_EQ(add(&x, &y, &z), 5);
