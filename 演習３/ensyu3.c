@@ -2,7 +2,7 @@
 #include <math.h>
 
 int main(void){
-    float r, ensyu = 0, menseki = 0;
+    float r = 0, ensyu = 0, menseki = 0;
     printf("円の半径を入力\n");
     scanf("%f", &r);
     ensyu = r * 2 * M_PI;
