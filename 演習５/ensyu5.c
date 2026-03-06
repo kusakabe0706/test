@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int main(void){
-    int asterisk = 0;
+    int input_num = 0;
     printf("何段？");
-    scanf("%d", &asterisk);
+    scanf("%d", &input_num);
     printf("--------------------\n");
-    for(int i = 1; i <= asterisk; i++){
+    for(int i = 1; i <= input_num; i++){
         for(int j = 1; j <= i; j++){
             printf("*");
         }

@@ -1,31 +1,31 @@
 #include <stdio.h>
 
 int main(void){
-    int a;
-    scanf("%d", &a);
+    int input_num;
+    scanf("%d", &input_num);
 
-    if (a > 0){
+    if (input_num > 0){
         printf("正の整数\n");
-    }else if (a < 0){
+    }else if (input_num < 0){
         printf("負の整数\n");
     }else{
         printf("ZERO\n");
     }
 
-    if (a == 0){ 
+    if (input_num == 0){ 
         printf("----------\n");
-    }else if (a % 2 != 0){
+    }else if (input_num % 2 != 0){
         printf("奇数\n");
     }else{
         printf("偶数\n");
     }
 
-    if(a < 2){
+    if(input_num < 2){
         printf("素数ではない\n");
         return 0;
     }
-    for (int i = 2; i < a; i++){
-        if(a % i == 0){ 
+    for (int i = 2; i < input_num; i++){
+        if(input_num % i == 0){ 
              printf("素数ではない\n");
              return 0;
          }
