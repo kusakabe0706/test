@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 int main(void){
-    int num, total = 0, count = 0;
-    float ave = 0;
+    int count = 0;
+    float num = 0, total = 0, ave = 0;
     printf("数値を入力 0で終了\n");
     scanf("%d", &num);
     if(num == 0){
