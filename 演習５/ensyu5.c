@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 int main(void){
-    int a, i, j;
+    int asterisk = 0;
     printf("何段？");
-    scanf("%d", &a);
+    scanf("%d", &asterisk);
     printf("--------------------\n");
-    for(i = 1; i <= a; i++){
-        for(j = 1; j <= i; j++){
+    for(int i = 1; i <= asterisk; i++){
+        for(int j = 1; j <= i; j++){
             printf("*");
         }
         printf("\n");

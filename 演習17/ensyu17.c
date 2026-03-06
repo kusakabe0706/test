@@ -1,22 +1,22 @@
 #include <stdio.h>
 #include <pthread.h>
 
-void* add_thread(void* a){
-    int* c = (int*) a;
-    (*c)++;
+void* add_thread(void* add){
+    int* result = (int*) add;
+    (*result)++;
     return NULL;
 }
 
 int main(void){
     pthread_t thread;
-    int b;
-    scanf("%d", &b);
+    int ans = 0;
+    scanf("%d", &ans);
 
-    pthread_create(&thread, NULL, add_thread, &b);
+    pthread_create(&thread, NULL, add_thread, &ans);
 
     pthread_join(thread, NULL);
 
-    printf("%d\n", b);
+    printf("%d\n", ans);
 
     return 0;
 }
