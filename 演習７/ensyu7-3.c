@@ -10,6 +10,7 @@ void hanten(char txt[]){
 
 int main(void){
     char *text;
+    printf("文字列を入力\n");
     scanf("%s", text);
 
     hanten(text);

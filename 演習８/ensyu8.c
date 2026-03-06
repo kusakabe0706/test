@@ -37,6 +37,7 @@ void non_pri(int a){
 
 int main(void){
     int a;
+    printf("数値を入力\n");
     scanf("%d", &a);
 
     //正負判定テーブル

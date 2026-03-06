@@ -22,7 +22,7 @@ void dv(int *ans){
 
 int main(void){
     int a;
-
+    printf("数値を入力\n");
     scanf("%d", &a);
 
     dv(&a);

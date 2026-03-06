@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void){
-    float a, b = 0, ave, count = 0;
+    float a, b = 0, ave = 0, count = 0;
     printf("数値を入力 0で終了\n");
     while (1)
     {

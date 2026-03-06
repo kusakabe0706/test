@@ -9,6 +9,7 @@ void change(int *c, int *d){
 
 int main(void){
     int a, b;
+    printf("数値を入力\n");
     scanf("%d %d", &a, &b);
     printf("%d → %d\n", a, b);
 

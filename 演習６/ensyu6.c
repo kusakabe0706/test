@@ -2,8 +2,8 @@
 
 int main(void){
     int n = 17, i;
-    int f1 = 0, f2 = 1, next;
-    for(i = 0;i < n; i++){
+    int f1 = 0, f2 = 1, next = 0;
+    for(i = 0; i < n; i++){
        printf("%d", f1);
 
        if(i < n){
