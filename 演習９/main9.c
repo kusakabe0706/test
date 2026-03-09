@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include "func9.c"
+#include "header9.h"
 
 int main(void){
-    int input_num;
+    int input_num = 0;
     printf("数値を入力\n");
     scanf("%d", &input_num);
 

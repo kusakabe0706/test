@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void){
-    int input_num;
+    int input_num = 0;
     scanf("%d", &input_num);
 
     if (input_num > 0){

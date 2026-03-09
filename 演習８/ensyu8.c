@@ -16,7 +16,7 @@ void not_prime(int id_3) { printf("素数ではない\n"); }
 
 
 int main(void){
-    int input_num = 0, is_not_prime = 0;
+    int input_num = 0, judge1 = 0, judge2 = 0, is_not_prime = 0;
     printf("数値を入力\n");
     scanf("%d", &input_num);
 
@@ -41,12 +41,24 @@ int main(void){
     };
     
     //正負判定
-    int judge_1 = (input_num > 0) ? 0 : (input_num < 0) ? 1 : 2;
-    table_1[judge_1](input_num);
+    if(input_num > 0){
+        judge1 = 0;
+    }else if (input_num < 0) {
+        judge1 = 1;
+    }else {
+        judge1 = 2;
+    }
+    table_1[judge1](input_num);
 
     //奇数偶数判定
-    int judge_2 = (input_num == 0) ? 2 : (input_num % 2 != 0) ? 1 : 0;
-    table_2[judge_2](input_num);
+    if (input_num == 0) {
+        judge2 = 2;
+    }else if (input_num % 2 != 0) {
+        judge2 = 1;
+    }else {
+        judge2 = 0;
+    }
+    table_2[judge2](input_num);
 
     //素数判定
     if(input_num < 2){

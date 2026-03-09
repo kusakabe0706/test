@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "func10.c"
 
 extern int global;
 
