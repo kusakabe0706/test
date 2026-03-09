@@ -17,7 +17,7 @@ void swap(member *x, member *y){
 }
 
 //名前順に並び替え
-void sort_name(menber data[], int n){
+void sort_name(member data[], int n){
     int i = 0, j = 0;
     //順番を確定させる位置をずらす
     for(i = 0; i < n; i++){
