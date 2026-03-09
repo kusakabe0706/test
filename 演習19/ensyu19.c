@@ -55,7 +55,7 @@ void* worker2(void* key2){
 
 int main(void){
     pthread_t w1, w2; 
-    int num = 0, id1 = 1, id2 = 2;
+    int input_num = 0, id1 = 1, id2 = 2;
 
     pthread_create(&w1, NULL, worker1, &id1);
     pthread_create(&w2, NULL, worker2, &id2);
@@ -63,13 +63,13 @@ int main(void){
     printf("スレッド1を動かす:1, スレッド2を動かす:2, 終了:3\n");
     
     while(1){
-        scanf("%d" ,&num);
+        scanf("%d" ,&input_num);
 
-        if(num == 1){
+        if(input_num == 1){
             w_id = 1;
-        }else if(num == 2){
+        }else if(input_num == 2){
             w_id = 2;
-        }else if(num == 3){
+        }else if(input_num == 3){
             end = true;
         }else{
             printf("error\n");
@@ -79,7 +79,7 @@ int main(void){
         pthread_cond_broadcast(&cond);
         pthread_mutex_unlock(&mutex);
 
-        if(num == 3){
+        if(input_num == 3){
             break;
         }
     }

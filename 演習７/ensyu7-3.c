@@ -9,9 +9,9 @@ void reverse(char arr[]){
 }
 
 int main(void){
-    char *input_arr;
+    char input_arr[20];
     printf("文字列を入力\n");
-    scanf("%s", input_arr);
+    fgets(input_arr, sizeof(input_arr), stdin);
 
     reverse(input_arr);
 

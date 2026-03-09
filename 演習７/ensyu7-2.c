@@ -7,7 +7,8 @@ void print_arr(char arr[]){
 int main(void){
     char input_arr[20];
     printf("文字列を入力\n");
-    scanf("%s", input_arr);
+    
+    fgets(input_arr, sizeof(input_arr), stdin);
     
     print_arr(input_arr);
 
