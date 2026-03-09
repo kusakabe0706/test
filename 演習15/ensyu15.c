@@ -3,21 +3,27 @@
 
 #define NUM 6
 
+//構造体の定義
 typedef struct {
     char name[20];
     int score;
-}menber;
+}member;
 
-void swap(menber *x, menber *y){
-    menber temp = *x;
+//順番入れ替え
+void swap(member *x, member *y){
+    member temp = *x;
     *x = *y;
     *y = temp;
 }
 
+//名前順に並び替え
 void sort_name(menber data[], int n){
-    int i, j;
+    int i = 0, j = 0;
+    //順番を確定させる位置をずらす
     for(i = 0; i < n; i++){
+        //隣り合う要素を比較
         for(j = n-1; j > i; j--){
+            //文字列をstrcmpで比較し、前の人が後ろの人より要素が大きい場合に入れ替え
             if(strcmp(data[j-1].name, data[j].name) > 0){
                 swap(&data[j-1], &data[j]);
             }
@@ -25,11 +31,15 @@ void sort_name(menber data[], int n){
     }
 }
 
-void sort_score(menber data[], int n){
-    int i, j;
+//成績順に並び替え
+void sort_score(member data[], int n){
+    int i = 0, j = 0;
+    //順番を確定させる位置をずらす
     for(i = 0; i < n; i++){
+        //隣り合う要素を比較
         for(j = n-1; j > i; j--){
-            if(data[j-1].score < data[j].score){
+            //前の成績が後ろの成績より低い場合に入れ替え
+            if(data[j-1].score < data[j].score){ 
                 swap(&data[j-1], &data[j]);
             }
         }
@@ -37,7 +47,8 @@ void sort_score(menber data[], int n){
 }
 
 int main(void){
-    menber data[NUM] = {
+    //初期化
+    member data[NUM] = {
         {"sara", 88},
         {"gintonic", 12},
         {"aida", 44},
@@ -46,16 +57,21 @@ int main(void){
         {"onizuka", 93},
     };
 
-    int i;
+    int i = 0;
+
+    //名前順にソート
     printf("名前順\n");
     sort_name(data, NUM);
     for(i = 0; i < NUM; i++){
+        //表示
         printf("%s:%d\n", data[i].name, data[i].score);
     }
 
+    //成績順にソート
     printf("成績順\n");
     sort_score(data, NUM);
     for(i = 0; i < NUM; i++){
+        //表示
         printf("%s:%d\n", data[i].name, data[i].score);
     }
 
