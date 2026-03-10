@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <pthread.h>
 #include <stdbool.h>
-#include <unistd.h>
 
 //mutexとcondを初期化
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
@@ -33,10 +32,12 @@ void* worker1(void* key1){
         }
 
         printf("スレッド1動作中\n");
+        
         //処理が終了したらロック解除
         pthread_mutex_unlock(&mutex);
-        //連続動作防止
-        sleep(2);
+
+        //w_idを初期化して連続処理防止
+        w_id = 0;
     }
     return NULL;
 }
@@ -57,9 +58,11 @@ void* worker2(void* key2){
         }
         
         printf("スレッド2動作中\n");
+
         pthread_mutex_unlock(&mutex);
 
-        sleep(2);
+        w_id = 0;
+
     }
     return NULL;
 }
