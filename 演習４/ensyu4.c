@@ -5,7 +5,7 @@ int main(void){
     float input_num = 0, total = 0, ave = 0;
     printf("数値を入力 0で終了\n");
 
-    scanf("%d", &input_num);
+    scanf("%f", &input_num);
 
     if(input_num == 0){
         printf("終了\n");
@@ -25,7 +25,7 @@ int main(void){
             printf("平均=%f\n", ave);
             return 0;
         }
-        scanf("%d", &input_num);
+        scanf("%f", &input_num);
         
     }
     
