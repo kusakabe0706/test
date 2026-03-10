@@ -28,6 +28,7 @@ void* scan_thread(void* arr){
 int main(void){
     pthread_t thread;
     char arr[256];
+    arr[0] = '\0';
 
     //関数ポインタの宣言と初期化
     void (*callback)(char*) = cb;

@@ -9,7 +9,8 @@ void reverse(char arr[]){
 }
 
 int main(void){
-    char input_arr[20] = '\0';
+    char input_arr[20];
+    input_arr[0] = '\0';
     printf("文字列を入力\n");
     fgets(input_arr, sizeof(input_arr), stdin);
 
