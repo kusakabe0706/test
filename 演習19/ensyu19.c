@@ -36,7 +36,7 @@ void* worker1(void* key1){
         //処理が終了したらロック解除
         pthread_mutex_unlock(&mutex);
 
-        //w_idを初期化して連続処理防止
+        //w_idを0にして再度待ちに入る
         w_id = 0;
     }
     return NULL;
